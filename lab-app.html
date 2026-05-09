@@ -61,10 +61,14 @@
       const screens = {
         'Dashboard': window.LabDashboard,
         'Clients': window.LabClient,
+        'Missions': window.LabMissions,
         'Timesheet': window.LabTimesheet,
         'Devis': window.LabQuotesList,
         'Agenda': window.LabAgenda,
+        'Documents': window.LabDocuments,
+        'Modèles': window.LabModeles,
         'Articles': window.LabEditor,
+        'Statistiques': window.LabStats,
       };
       const Comp = screens[screen];
       if (!Comp) return <Empty label={screen} />;
