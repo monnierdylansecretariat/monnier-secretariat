@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://monnier-secretariat.com/</loc><priority>1.0</priority></url>
-  <url><loc>https://monnier-secretariat.com/tarifs.html</loc><priority>0.9</priority></url>
-  <url><loc>https://monnier-secretariat.com/articles.html</loc><priority>0.7</priority></url>
-  <url><loc>https://monnier-secretariat.com/articles/automatiser-relances-clients.html</loc><priority>0.6</priority></url>
-  <url><loc>https://monnier-secretariat.com/about.html</loc><priority>0.6</priority></url>
-  <url><loc>https://monnier-secretariat.com/contact.html</loc><priority>0.9</priority></url>
+  <url><loc>https://monnier-secretariat.com/</loc><lastmod>2026-05-09</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://monnier-secretariat.com/tarifs.html</loc><lastmod>2026-05-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://monnier-secretariat.com/contact.html</loc><lastmod>2026-05-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://monnier-secretariat.com/about.html</loc><lastmod>2026-05-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://monnier-secretariat.com/articles.html</loc><lastmod>2026-05-09</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://monnier-secretariat.com/articles/automatiser-relances-clients.html</loc><lastmod>2026-05-09</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://monnier-secretariat.com/mentions.html</loc><lastmod>2026-05-09</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://monnier-secretariat.com/confidentialite.html</loc><lastmod>2026-05-09</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>
