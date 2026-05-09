@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mon Espace — Monnier · bureau secrétariat</title>
+  <meta name="description" content="Suivi de vos heures, missions, documents et devis." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/app.css" />
+  <style>
+    html, body { height: 100%; margin: 0; }
+    body { background: var(--paper); color: var(--ink); font-family: var(--sans); }
+    #root { min-height: 100vh; }
+    .empty {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      height: 100%; color: var(--ink-mute); padding: 80px;
+      font-family: var(--display); font-size: 28px; font-style: italic;
+      letter-spacing: -0.015em; text-align: center;
+    }
+    .empty small { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em;
+      text-transform: uppercase; font-style: normal; color: var(--ink-faint); margin-top: 12px; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+  <script type="text/babel" data-presets="env,react" src="js/shared.jsx"></script>
+  <script type="text/babel" data-presets="env,react" src="js/espace-core.jsx"></script>
+  <script type="text/babel" data-presets="env,react" src="js/espace-extras.jsx"></script>
+  <script type="text/babel" data-presets="env,react" src="js/lab-quotes.jsx"></script>
+
+  <script type="text/babel" data-presets="env,react">
+    const EspaceApp = () => {
+      const [screen, setScreen] = React.useState(() =>
+        new URLSearchParams(window.location.search).get('s') || 'Accueil'
+      );
+      const nav = (s) => {
+        setScreen(s);
+        const u = new URL(window.location);
+        u.searchParams.set('s', s);
+        window.history.replaceState({}, '', u);
+      };
+      const Empty = ({ label }) => (
+        <div className="ms-root app-shell" style={{ height: '100vh' }}>
+          <window.EspaceSide active={label} />
+          <main className="app-main">
+            <header style={{ padding: '20px 32px', borderBottom: '1px solid var(--line-soft)' }}>
+              <div className="mono" style={{ fontSize: 11, color: 'var(--ink-mute)', letterSpacing: '0.08em' }}>{label.toUpperCase()}</div>
+              <div style={{ fontFamily: 'var(--display)', fontSize: 28, fontWeight: 400, letterSpacing: '-0.015em', marginTop: 2 }}>{label}</div>
+            </header>
+            <div className="empty">{label}<small>écran à venir · cliquez dans le menu pour naviguer</small></div>
+          </main>
+        </div>
+      );
+
+      const screens = {
+        'Accueil': window.EspaceHome,
+        'Heures': window.EspaceHours,
+        'Devis': window.EspaceDevis,
+        'Mon forfait': window.EspaceChangePlan,
+        'Messagerie': window.EspaceInbox,
+      };
+      const Comp = screens[screen];
+
+      React.useEffect(() => {
+        const items = document.querySelectorAll('.app-side .nav-item, .espace-sidebar a[href="#"]');
+        items.forEach(el => {
+          const label = el.querySelector('span')?.textContent || el.textContent.trim();
+          if (!label) return;
+          el.style.cursor = 'pointer';
+          el.onclick = (e) => { e.preventDefault(); nav(label); };
+        });
+      }, [screen]);
+
+      if (!Comp) return <Empty label={screen} />;
+      return <Comp />;
+    };
+    ReactDOM.createRoot(document.getElementById('root')).render(<EspaceApp />);
+  </script>
+</body>
+</html>

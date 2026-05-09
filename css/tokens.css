@@ -1,0 +1,51 @@
+:root {
+  /* surfaces */
+  --paper: oklch(0.97 0.012 80);
+  --paper-warm: oklch(0.95 0.015 75);
+  --paper-2: oklch(0.94 0.014 78);
+  --surface: oklch(0.99 0.006 80);
+  --sand: oklch(0.93 0.022 75);
+  --paper-warm-2: oklch(0.91 0.018 75);
+  /* ink */
+  --ink: oklch(0.18 0.008 75);
+  --ink-soft: oklch(0.38 0.008 75);
+  --ink-mute: oklch(0.56 0.010 75);
+  --ink-faint: oklch(0.70 0.010 75);
+  --night: oklch(0.165 0.008 75);
+  /* accent */
+  --accent: oklch(0.62 0.13 55);
+  --accent-ink: oklch(0.42 0.13 55);
+  --accent-soft: oklch(0.78 0.07 60);
+  --accent-pale: oklch(0.94 0.03 70);
+  --highlight: oklch(0.94 0.10 92);
+  --ok: oklch(0.64 0.11 145);
+  /* lines */
+  --line: oklch(0.88 0.008 75);
+  --line-soft: oklch(0.92 0.008 75);
+  /* type */
+  --display: 'Instrument Serif', 'Cormorant Garamond', Georgia, serif;
+  --sans: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --mono: 'Geist Mono', 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  /* radii / shadow */
+  --r-sm: 4px;
+  --r: 6px;
+  --r-lg: 10px;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+.ms-root { font-family: var(--sans); color: var(--ink); }
+.mono { font-family: var(--mono); }
+.uppercase { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-mute); }
+.hl { background: linear-gradient(transparent 60%, var(--highlight) 60%); padding: 0 2px; }
+.hr { height: 1px; background: var(--line); border: 0; }
+a { color: var(--ink); }
+img { max-width: 100%; display: block; }
