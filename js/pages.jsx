@@ -1,5 +1,5 @@
 /* global React, ReactDOM */
-const { Icon, Ph, Eyebrow, VitrineNav, Footer } = window.MS;
+const { Icon, Ph, Eyebrow, VitrineNav, Footer, CookieBanner } = window.MS;
 
 // ─── HOME (variant B · vertical classique retenu) ───
 const Home = () => (
@@ -189,6 +189,7 @@ const Home = () => (
       <a href="contact.html" className="btn btn-primary btn-lg" style={{ textDecoration: 'none' }}>Réserver mon créneau <Icon name="arrow" size={13} /></a>
     </section>
 
+    <CookieBanner />
     <Footer />
   </div>
 );
@@ -273,7 +274,8 @@ const Tarifs = () => {
           </table>
         </div>
       </section>
-      <Footer />
+      <CookieBanner />
+    <Footer />
     </div>
   );
 };
@@ -344,7 +346,8 @@ const Articles = () => {
           ))}
         </div>
       </section>
-      <Footer />
+      <CookieBanner />
+    <Footer />
     </div>
   );
 };
@@ -408,6 +411,7 @@ const Article = () => (
         <a href="contact.html" className="btn btn-primary" style={{ textDecoration: 'none' }}>Réserver un appel <Icon name="arrow" size={12} /></a>
       </div>
     </article>
+    <CookieBanner />
     <Footer />
   </div>
 );
@@ -475,6 +479,7 @@ const About = () => (
         </div>
       </div>
     </section>
+    <CookieBanner />
     <Footer />
   </div>
 );
@@ -595,7 +600,8 @@ const Contact = () => {
           </form>
         </div>
       </section>
-      <Footer />
+      <CookieBanner />
+    <Footer />
     </div>
   );
 };
@@ -616,6 +622,7 @@ const Merci = () => (
       </p>
       <a href="index.html" className="btn btn-ghost" style={{ textDecoration: 'none' }}>← Retour à l'accueil</a>
     </section>
+    <CookieBanner />
     <Footer />
   </div>
 );
@@ -682,6 +689,7 @@ const Mentions = () => (
         </div>
       </div>
     </section>
+    <CookieBanner />
     <Footer />
   </div>
 );
@@ -800,6 +808,7 @@ const Confidentialite = () => (
         </div>
       </div>
     </section>
+    <CookieBanner />
     <Footer />
   </div>
 );
@@ -889,7 +898,8 @@ const LoginPage = ({ kind }) => {
           </div>
         </div>
       </section>
-      <Footer />
+      <CookieBanner />
+    <Footer />
     </div>
   );
 };

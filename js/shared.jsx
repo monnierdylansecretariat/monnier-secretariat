@@ -202,5 +202,75 @@ const LabSide = ({ active, onNav }) => {
   );
 };
 
-Object.assign(window, { Icon, Ph, Eyebrow, VitrineNav, Footer, TopBar, LabSide });
-window.MS = { Icon, Ph, Eyebrow, VitrineNav, Footer, TopBar, LabSide };
+// ─── Bannière cookies (conforme droit belge / ePrivacy) ───
+const CookieBanner = () => {
+  const [visible, setVisible] = React.useState(false);
+  const [detail, setDetail] = React.useState(false);
+
+  React.useEffect(() => {
+    if (!localStorage.getItem('cookie-consent')) setVisible(true);
+  }, []);
+
+  const accept = () => {
+    localStorage.setItem('cookie-consent', 'accepted');
+    setVisible(false);
+  };
+  const refuse = () => {
+    localStorage.setItem('cookie-consent', 'refused');
+    setVisible(false);
+  };
+
+  if (!visible) return null;
+
+  return (
+    <div style={{
+      position: 'fixed', bottom: 24, left: 24, right: 24, zIndex: 9999,
+      maxWidth: 540, margin: '0 auto',
+      background: 'var(--ink)', color: 'var(--paper)',
+      borderRadius: 10, padding: '20px 24px',
+      boxShadow: '0 8px 32px oklch(0.1 0.01 75 / 0.4)',
+      fontFamily: 'var(--sans)', fontSize: 14,
+    }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 16 }}>
+        <div style={{ flex: 1 }}>
+          <div style={{ fontWeight: 600, marginBottom: 6, fontSize: 15 }}>Ce site utilise des cookies</div>
+          <div style={{ color: 'oklch(0.78 0.01 75)', lineHeight: 1.55, fontSize: 13 }}>
+            Nous utilisons uniquement des cookies <strong style={{ color: 'var(--paper)' }}>strictement nécessaires</strong> au fonctionnement du site.
+            Notre outil d'analyse (<a href="https://plausible.io" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-soft)' }}>Plausible</a>) ne pose aucun cookie et ne collecte aucune donnée personnelle.
+            {detail && (
+              <div style={{ marginTop: 10, padding: '10px 14px', background: 'oklch(0.25 0.008 75)', borderRadius: 6, fontSize: 12, lineHeight: 1.6 }}>
+                <div style={{ marginBottom: 6 }}>
+                  <span style={{ color: 'oklch(0.6 0.01 75)' }}>COOKIES NÉCESSAIRES</span><br />
+                  <strong>cookie-consent</strong> — mémorise votre choix (1 an). Aucun tiers.
+                </div>
+                <div>
+                  <span style={{ color: 'oklch(0.6 0.01 75)' }}>ANALYTICS</span><br />
+                  Plausible.io — sans cookie, sans données personnelles, conforme RGPD by design.
+                </div>
+              </div>
+            )}
+          </div>
+          <button
+            onClick={() => setDetail(d => !d)}
+            style={{ background: 'none', border: 'none', color: 'oklch(0.6 0.01 75)', fontSize: 12, cursor: 'pointer', padding: '6px 0 0', textDecoration: 'underline', fontFamily: 'var(--mono)' }}>
+            {detail ? 'Masquer le détail' : 'Voir le détail'}
+          </button>
+        </div>
+      </div>
+      <div style={{ display: 'flex', gap: 8, marginTop: 16, flexWrap: 'wrap' }}>
+        <button onClick={accept} className="btn btn-sm" style={{
+          background: 'var(--paper)', color: 'var(--ink)', border: 'none', fontWeight: 600,
+        }}>Accepter</button>
+        <button onClick={refuse} className="btn btn-sm btn-ghost" style={{
+          borderColor: 'oklch(0.4 0.008 75)', color: 'oklch(0.78 0.01 75)',
+        }}>Refuser les non-essentiels</button>
+        <a href="confidentialite.html" style={{ fontSize: 12, color: 'oklch(0.6 0.01 75)', alignSelf: 'center', marginLeft: 4, textDecoration: 'underline' }}>
+          Politique de confidentialité
+        </a>
+      </div>
+    </div>
+  );
+};
+
+Object.assign(window, { Icon, Ph, Eyebrow, VitrineNav, Footer, TopBar, LabSide, CookieBanner });
+window.MS = { Icon, Ph, Eyebrow, VitrineNav, Footer, TopBar, LabSide, CookieBanner };
