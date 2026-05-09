@@ -520,8 +520,8 @@ const Contact = () => {
               <div className="mono" style={{ fontSize: 11, color: 'var(--ink-mute)', letterSpacing: '0.08em', marginBottom: 12 }}>COORDONNÉES SOCIÉTÉ</div>
               <div style={{ fontSize: 13, lineHeight: 1.65 }}>
                 Dylan Monnier — bureau secrétariat<br />
-                BCE 0789.456.789 · TVA BE 0789.456.789<br />
-                IBAN BE45 0689 1234 5678 · BIC GKCCBEBB
+                BCE 0795.650.319 · TVA BE 0795.650.319<br />
+                Rue du Bois 71 · 5190 Jemeppe-sur-Sambre
               </div>
             </div>
           </div>
@@ -621,29 +621,183 @@ const Merci = () => (
 );
 
 
+const LegalH2 = ({ children }) => (
+  <h2 style={{ fontFamily: 'var(--display)', fontSize: 24, fontWeight: 500, color: 'var(--ink)', margin: '36px 0 12px', letterSpacing: '-0.01em' }}>{children}</h2>
+);
+
 const Mentions = () => (
   <div className="ms-root" style={{ minHeight: '100%', background: 'var(--paper)' }}>
     <VitrineNav />
     <section style={{ padding: '64px 56px 80px', maxWidth: 760, margin: '0 auto' }}>
-      <Eyebrow mark>légal · mentions & confidentialité</Eyebrow>
+      <Eyebrow mark>légal · mentions légales</Eyebrow>
       <h1 style={{ fontFamily: 'var(--display)', fontSize: 'clamp(40px, 6vw, 64px)', fontWeight: 400, lineHeight: 1.05, letterSpacing: '-0.025em', marginBottom: 28 }}>
         Mentions <span style={{ fontStyle: 'italic' }}>légales</span>
       </h1>
-      <div style={{ fontSize: 15, lineHeight: 1.7, color: 'var(--ink-soft)' }}>
-        <h2 style={{ fontFamily: 'var(--display)', fontSize: 24, fontWeight: 500, color: 'var(--ink)', margin: '32px 0 12px' }}>Éditeur du site</h2>
-        <p>Dylan Monnier — bureau secrétariat<br />Indépendant en personne physique<br />BCE 0789.456.789 · TVA BE 0789.456.789<br />Rue de la Senne 12, 1000 Bruxelles<br />info@monnier-secretariat.be</p>
+      <div style={{ fontSize: 15, lineHeight: 1.75, color: 'var(--ink-soft)' }}>
 
-        <h2 style={{ fontFamily: 'var(--display)', fontSize: 24, fontWeight: 500, color: 'var(--ink)', margin: '32px 0 12px' }}>Hébergement</h2>
-        <p>Site hébergé par Netlify Inc., 44 Montgomery St, San Francisco, CA 94104, USA.</p>
+        <LegalH2>Éditeur du site</LegalH2>
+        <p style={{ margin: '0 0 16px' }}>
+          <strong style={{ color: 'var(--ink)' }}>Dylan Monnier — bureau secrétariat</strong><br />
+          Indépendant en personne physique (droit belge)<br />
+          BCE 0795.650.319 · TVA BE 0795.650.319<br />
+          Rue du Bois 71, 5190 Jemeppe-sur-Sambre · Belgique<br />
+          <a href="tel:+32471417333">+32 471 41 73 33</a> · <a href="mailto:info@monnier-secretariat.be">info@monnier-secretariat.be</a>
+        </p>
 
-        <h2 style={{ fontFamily: 'var(--display)', fontSize: 24, fontWeight: 500, color: 'var(--ink)', margin: '32px 0 12px' }}>Données personnelles</h2>
-        <p>Les données collectées via le formulaire de contact (nom, email, société, message) sont utilisées exclusivement pour répondre à votre demande. Conservation : 24 mois maximum après le dernier échange. Aucune cession à des tiers. Vous pouvez demander rectification ou suppression à tout moment à <a href="mailto:info@monnier-secretariat.be">info@monnier-secretariat.be</a>.</p>
+        <LegalH2>Hébergement</LegalH2>
+        <p style={{ margin: '0 0 16px' }}>
+          Ce site est hébergé par <strong style={{ color: 'var(--ink)' }}>Netlify Inc.</strong><br />
+          44 Montgomery Street, Suite 300 · San Francisco, CA 94104 · États-Unis<br />
+          <a href="https://www.netlify.com" target="_blank" rel="noopener noreferrer">www.netlify.com</a>
+        </p>
 
-        <h2 style={{ fontFamily: 'var(--display)', fontSize: 24, fontWeight: 500, color: 'var(--ink)', margin: '32px 0 12px' }}>Cookies & analytics</h2>
-        <p>Ce site utilise <strong>Plausible Analytics</strong>, une solution respectueuse de la vie privée qui ne pose pas de cookies, n'utilise pas d'identifiants persistants et ne transfère aucune donnée hors de l'UE. Aucune bannière de consentement n'est nécessaire.</p>
+        <LegalH2>Propriété intellectuelle</LegalH2>
+        <p style={{ margin: '0 0 16px' }}>
+          L'ensemble des contenus de ce site (textes, visuels, design, code source) est la propriété exclusive de Dylan Monnier, sauf mention contraire explicite. Toute reproduction, représentation, modification ou exploitation, totale ou partielle, sans autorisation écrite préalable est strictement interdite et constitue une contrefaçon sanctionnée par le droit belge et européen.
+        </p>
 
-        <h2 style={{ fontFamily: 'var(--display)', fontSize: 24, fontWeight: 500, color: 'var(--ink)', margin: '32px 0 12px' }}>Propriété intellectuelle</h2>
-        <p>Tous les contenus (textes, design, code) sont la propriété de Dylan Monnier sauf mention contraire. Reproduction interdite sans accord écrit.</p>
+        <LegalH2>Responsabilité</LegalH2>
+        <p style={{ margin: '0 0 16px' }}>
+          Les informations publiées sur ce site sont fournies à titre indicatif et peuvent être modifiées sans préavis. Dylan Monnier s'efforce d'en assurer l'exactitude mais ne saurait être tenu responsable des erreurs, omissions ou des résultats obtenus par l'usage de ces informations. Les liens vers des sites tiers sont fournis à titre informatif ; Dylan Monnier n'exerce aucun contrôle sur leur contenu.
+        </p>
+
+        <LegalH2>Données personnelles</LegalH2>
+        <p style={{ margin: '0 0 16px' }}>
+          Le traitement des données personnelles collectées via ce site est décrit dans la <a href="confidentialite.html">politique de confidentialité</a>. Pour toute question relative à vos données, contactez <a href="mailto:info@monnier-secretariat.be">info@monnier-secretariat.be</a>.
+        </p>
+
+        <LegalH2>Cookies & analytics</LegalH2>
+        <p style={{ margin: '0 0 16px' }}>
+          Ce site utilise <strong style={{ color: 'var(--ink)' }}>Plausible Analytics</strong>, une solution respectueuse de la vie privée certifiée conforme au RGPD. Plausible ne pose aucun cookie, n'utilise aucun identifiant persistant et ne transfère aucune donnée personnelle. Aucune bannière de consentement n'est requise.
+        </p>
+
+        <LegalH2>Loi applicable & juridiction</LegalH2>
+        <p style={{ margin: '0 0 16px' }}>
+          Le présent site et ses conditions sont régis par le droit belge. En cas de litige relatif à son utilisation, les parties s'engagent à rechercher une solution amiable. À défaut, les tribunaux de l'arrondissement judiciaire de Namur seront seuls compétents.
+        </p>
+
+        <div className="card card-sand" style={{ padding: '18px 22px', marginTop: 40 }}>
+          <div className="mono" style={{ fontSize: 10, color: 'var(--ink-mute)', letterSpacing: '0.08em', marginBottom: 6 }}>MISE À JOUR</div>
+          <div style={{ fontSize: 13, color: 'var(--ink-soft)' }}>Dernière mise à jour : mai 2026</div>
+        </div>
+      </div>
+    </section>
+    <Footer />
+  </div>
+);
+
+// ─── CONFIDENTIALITÉ ───
+const Confidentialite = () => (
+  <div className="ms-root" style={{ minHeight: '100%', background: 'var(--paper)' }}>
+    <VitrineNav />
+    <section style={{ padding: '64px 56px 80px', maxWidth: 760, margin: '0 auto' }}>
+      <Eyebrow mark>légal · politique de confidentialité</Eyebrow>
+      <h1 style={{ fontFamily: 'var(--display)', fontSize: 'clamp(40px, 6vw, 64px)', fontWeight: 400, lineHeight: 1.05, letterSpacing: '-0.025em', marginBottom: 16 }}>
+        Politique de <span style={{ fontStyle: 'italic' }}>confidentialité</span>
+      </h1>
+      <p style={{ fontSize: 16, color: 'var(--ink-soft)', marginBottom: 40, lineHeight: 1.6 }}>
+        Dylan Monnier s'engage à protéger vos données personnelles conformément au Règlement Général sur la Protection des Données (RGPD — UE 2016/679) et à la loi belge du 30 juillet 2018.
+      </p>
+
+      <div style={{ fontSize: 15, lineHeight: 1.75, color: 'var(--ink-soft)' }}>
+
+        <LegalH2>Responsable du traitement</LegalH2>
+        <p style={{ margin: '0 0 16px' }}>
+          <strong style={{ color: 'var(--ink)' }}>Dylan Monnier — bureau secrétariat</strong><br />
+          BCE 0795.650.319 · Rue du Bois 71, 5190 Jemeppe-sur-Sambre<br />
+          <a href="mailto:info@monnier-secretariat.be">info@monnier-secretariat.be</a> · <a href="tel:+32471417333">+32 471 41 73 33</a>
+        </p>
+
+        <LegalH2>Données collectées et finalités</LegalH2>
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 18, margin: '16px 0 24px' }}>
+          {[
+            {
+              n: '01', title: 'Formulaire de contact',
+              data: 'Prénom, nom, email professionnel, société, BCE (optionnel), message, services sélectionnés, volume estimé.',
+              base: 'Consentement (art. 6.1.a RGPD)',
+              retention: '24 mois après le dernier échange',
+              dest: 'Dylan Monnier uniquement — via Netlify Forms (sous-traitant)',
+            },
+            {
+              n: '02', title: 'Analytics — Plausible.io',
+              data: 'Pages visitées, référents, pays, type d\'appareil. Aucune donnée personnelle collectée.',
+              base: 'Intérêt légitime (art. 6.1.f RGPD) — aucun cookie, aucun identifiant',
+              retention: 'Données agrégées, non personnelles',
+              dest: 'Plausible Analytics (UE) — aucune donnée personnelle transmise',
+            },
+            {
+              n: '03', title: 'Newsletter',
+              data: 'Adresse email professionnelle.',
+              base: 'Consentement explicite (opt-in — art. 6.1.a RGPD)',
+              retention: 'Jusqu\'à désinscription',
+              dest: 'Dylan Monnier — désinscription via lien en bas de chaque email ou par email',
+            },
+            {
+              n: '04', title: 'Espace client (Mon Espace)',
+              data: 'Email, identifiants de connexion, données de missions (heures prestées, devis, documents).',
+              base: 'Exécution du contrat de service (art. 6.1.b RGPD)',
+              retention: 'Durée du contrat + 7 ans (obligations comptables belges)',
+              dest: 'Dylan Monnier uniquement',
+            },
+          ].map(({ n, title, data, base, retention, dest }) => (
+            <div key={n} className="card" style={{ padding: '20px 24px' }}>
+              <div style={{ display: 'flex', alignItems: 'baseline', gap: 12, marginBottom: 10 }}>
+                <span className="mono" style={{ fontSize: 11, color: 'var(--ink-mute)' }}>{n}</span>
+                <strong style={{ color: 'var(--ink)', fontSize: 16 }}>{title}</strong>
+              </div>
+              <div style={{ display: 'grid', gridTemplateColumns: 'auto 1fr', gap: '6px 16px', fontSize: 13 }}>
+                <span className="mono" style={{ fontSize: 10, color: 'var(--ink-mute)', paddingTop: 2 }}>DONNÉES</span><span>{data}</span>
+                <span className="mono" style={{ fontSize: 10, color: 'var(--ink-mute)', paddingTop: 2 }}>BASE LÉGALE</span><span>{base}</span>
+                <span className="mono" style={{ fontSize: 10, color: 'var(--ink-mute)', paddingTop: 2 }}>CONSERVATION</span><span>{retention}</span>
+                <span className="mono" style={{ fontSize: 10, color: 'var(--ink-mute)', paddingTop: 2 }}>DESTINATAIRES</span><span>{dest}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <LegalH2>Vos droits</LegalH2>
+        <p style={{ margin: '0 0 12px' }}>
+          Conformément au RGPD, vous disposez des droits suivants sur vos données personnelles :
+        </p>
+        <ul style={{ margin: '0 0 16px', paddingLeft: 20, display: 'flex', flexDirection: 'column', gap: 6 }}>
+          {[
+            ['Accès', 'obtenir une copie de vos données'],
+            ['Rectification', 'corriger des données inexactes ou incomplètes'],
+            ['Effacement', '"droit à l\'oubli" — suppression de vos données'],
+            ['Limitation', 'restreindre le traitement dans certains cas'],
+            ['Portabilité', 'recevoir vos données dans un format structuré'],
+            ['Opposition', 'vous opposer au traitement fondé sur l\'intérêt légitime'],
+            ['Retrait du consentement', 'à tout moment, sans effet rétroactif'],
+          ].map(([right, desc]) => (
+            <li key={right}><strong style={{ color: 'var(--ink)' }}>{right}</strong> — {desc}</li>
+          ))}
+        </ul>
+        <p style={{ margin: '0 0 16px' }}>
+          Pour exercer ces droits, contactez : <a href="mailto:info@monnier-secretariat.be">info@monnier-secretariat.be</a><br />
+          Réponse sous 30 jours. Une pièce d'identité peut être demandée pour les demandes d'accès.
+        </p>
+
+        <LegalH2>Droit de réclamation</LegalH2>
+        <p style={{ margin: '0 0 16px' }}>
+          En cas de litige non résolu, vous pouvez introduire une réclamation auprès de l'<strong style={{ color: 'var(--ink)' }}>Autorité de protection des données (APD)</strong> :<br />
+          Rue de la Presse 35, 1000 Bruxelles · <a href="https://www.autoriteprotectiondonnees.be" target="_blank" rel="noopener noreferrer">autoriteprotectiondonnees.be</a> · contact@apd-gba.be
+        </p>
+
+        <LegalH2>Transferts hors Union européenne</LegalH2>
+        <p style={{ margin: '0 0 16px' }}>
+          <strong style={{ color: 'var(--ink)' }}>Netlify Inc.</strong> (hébergement du site et des formulaires) est basé aux États-Unis. Le transfert est encadré par les clauses contractuelles types approuvées par la Commission européenne (décision 2021/914). Aucune autre donnée n'est transférée hors de l'UE.
+        </p>
+
+        <LegalH2>Sécurité</LegalH2>
+        <p style={{ margin: '0 0 16px' }}>
+          Toutes les communications sont chiffrées via HTTPS (TLS). L'accès à l'espace client est protégé par authentification. Aucune donnée de carte bancaire n'est collectée ni stockée via ce site.
+        </p>
+
+        <div className="card card-sand" style={{ padding: '18px 22px', marginTop: 40 }}>
+          <div className="mono" style={{ fontSize: 10, color: 'var(--ink-mute)', letterSpacing: '0.08em', marginBottom: 6 }}>MISE À JOUR</div>
+          <div style={{ fontSize: 13, color: 'var(--ink-soft)' }}>Dernière mise à jour : mai 2026 · Applicable au site <strong>monnier-secretariat.com</strong></div>
+        </div>
       </div>
     </section>
     <Footer />
@@ -745,5 +899,5 @@ const Lab = () => <LoginPage kind="lab" />;
 // Mount based on data-page
 const root = document.getElementById('root');
 const page = root.dataset.page;
-const Cmp = { home: Home, tarifs: Tarifs, articles: Articles, article: Article, about: About, contact: Contact, merci: Merci, mentions: Mentions, espace: Espace, lab: Lab }[page];
+const Cmp = { home: Home, tarifs: Tarifs, articles: Articles, article: Article, about: About, contact: Contact, merci: Merci, mentions: Mentions, confidentialite: Confidentialite, espace: Espace, lab: Lab }[page];
 ReactDOM.createRoot(root).render(<Cmp />);

@@ -108,7 +108,9 @@ const Footer = () => (
         <p style={{ fontSize: 13, lineHeight: 1.55, margin: 0, marginBottom: 14 }}>
           Bras droit administratif pour indépendants, TPE et PME en Belgique francophone.
         </p>
-        <a href="mailto:info@monnier-secretariat.be" style={{ fontSize: 13 }}>info@monnier-secretariat.be</a>
+        <a href="mailto:info@monnier-secretariat.be" style={{ fontSize: 13, display: 'block', marginBottom: 6 }}>info@monnier-secretariat.be</a>
+        <a href="tel:+32471417333" style={{ fontSize: 13, display: 'block', marginBottom: 6 }}>+32 471 41 73 33</a>
+        <div style={{ fontSize: 13, color: 'oklch(0.78 0.01 75)' }}>Rue du Bois 71 · 5190 Jemeppe-sur-Sambre</div>
       </div>
       <div>
         <h4>Services</h4>
@@ -131,10 +133,10 @@ const Footer = () => (
       <div>
         <h4>Légal</h4>
         <ul>
-          <li>BCE 0789.456.789</li>
-          <li>TVA BE 0789.456.789</li>
+          <li>BCE 0795.650.319</li>
+          <li>TVA BE 0795.650.319</li>
           <li><a href="mentions.html">Mentions légales</a></li>
-          <li><a href="mentions.html">Confidentialité</a></li>
+          <li><a href="confidentialite.html">Confidentialité</a></li>
         </ul>
       </div>
     </div>
