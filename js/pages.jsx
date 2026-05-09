@@ -434,7 +434,11 @@ const About = () => (
             Mon parti pris : <span className="hl">je me forme aux outils qui changent</span> — IA, automatisation, no-code — pour que votre admin coûte moins en heures et plus en lisibilité.
           </p>
         </div>
-        <Ph w="100%" h={420} label="portrait" tone="a" />
+        <img src="images/dylan.jpg" alt="Dylan Monnier — bureau secrétariat"
+          style={{ width: '100%', height: 420, objectFit: 'cover', objectPosition: 'center top', borderRadius: 'var(--r)' }}
+          onError={e => { e.target.style.display='none'; e.target.nextSibling.style.display='block'; }}
+        />
+        <Ph w="100%" h={420} label="portrait" tone="a" style={{ display: 'none' }} />
       </div>
     </section>
 
