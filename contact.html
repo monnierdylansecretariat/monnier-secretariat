@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact — Monnier · bureau secrétariat</title>
-  <meta name="description" content="Réservez un appel découverte de 30 minutes. Sans engagement." />
+  <title>Contact & Devis — Monnier · bureau secrétariat Belgique</title>
+  <meta name="description" content="Réservez un appel découverte gratuit de 30 min avec Dylan Monnier, secrétaire indépendant en Belgique. Réponse sous 4h ouvrables. Forfaits secrétariat dès 490€/mois." />
   <link rel="canonical" href="https://monnier-secretariat.com/contact.html" />
 
   <!-- OG -->
@@ -31,6 +31,13 @@
   <script defer data-domain="monnier-secretariat.com" src="https://plausible.io/js/script.js"></script>
 </head>
 <body>
+  <!-- Netlify Forms: déclaration statique pour détection au déploiement -->
+  <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input name="prenom" /><input name="nom" /><input name="email" type="email" />
+    <input name="societe" /><input name="services" /><input name="volume" />
+    <textarea name="message"></textarea><input name="bot-field" />
+  </form>
+
   <div id="root" data-page="contact"></div>
 
   <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
