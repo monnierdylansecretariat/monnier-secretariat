@@ -22,10 +22,10 @@ const LabQuote = () => (
               <div>
                 <div style={{ fontFamily: 'var(--display)', fontSize: 22, fontWeight: 500, letterSpacing: '-0.02em' }}>monnier<span style={{ color: 'var(--ink-mute)', fontWeight: 400 }}>·secrétariat</span></div>
                 <div className="mono" style={{ fontSize: 10, color: 'var(--ink-mute)', marginTop: 8, lineHeight: 1.6 }}>
-                  Dylan Monnier · indépendant<br />
-                  Rue de la Senne 12 · 1000 Bruxelles<br />
-                  BCE BE 0789.456.123 · TVA exempt art. 44<br />
-                  IBAN BE68 5390 0754 7034 · BIC GKCCBEBB
+                  Dylan Monnier · indépendant en personne physique<br />
+                  Rue du Bois 71 · 5190 Jemeppe-sur-Sambre<br />
+                  BCE BE 0795.650.319 · TVA BE 0795.650.319<br />
+                  info@monnier-secretariat.be
                 </div>
               </div>
               <div style={{ textAlign: 'right' }}>
@@ -49,7 +49,7 @@ const LabQuote = () => (
               <div>
                 <div className="mono" style={{ fontSize: 10, color: 'var(--ink-mute)', letterSpacing: '0.08em', marginBottom: 8 }}>OBJET</div>
                 <div style={{ fontSize: 13, lineHeight: 1.6 }}>
-                  Passage au forfait <strong>Confort 30</strong> à partir du 1er juin 2026.<br />
+                  Passage au forfait <strong>Sérénité 30</strong> à partir du 1er juin 2026.<br />
                   Engagement mensuel reconductible. Sans engagement de durée.
                 </div>
               </div>
@@ -61,7 +61,7 @@ const LabQuote = () => (
               </thead>
               <tbody>
                 <tr>
-                  <td style={{ color: 'var(--ink)', fontWeight: 500 }}>Forfait Confort 30h<div style={{ fontSize: 11, color: 'var(--ink-mute)', fontWeight: 400, marginTop: 2 }}>secrétariat · pré-compta · permanence · RH light · community</div></td>
+                  <td style={{ color: 'var(--ink)', fontWeight: 500 }}>Forfait Sérénité 30h<div style={{ fontSize: 11, color: 'var(--ink-mute)', fontWeight: 400, marginTop: 2 }}>secrétariat · pré-compta · permanence · RH light · community</div></td>
                   <td className="mono" style={{ textAlign: 'right' }}>1</td>
                   <td className="mono" style={{ textAlign: 'right' }}>990,00 €</td>
                   <td className="mono" style={{ textAlign: 'right' }}>990,00 €</td>
@@ -105,7 +105,7 @@ const LabQuote = () => (
             {/* signature + handoff */}
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 18, marginBottom: 24 }}>
               <div style={{ background: 'var(--paper-warm)', padding: '14px 18px', borderRadius: 4, fontSize: 12, color: 'var(--ink-soft)', lineHeight: 1.6 }}>
-                <strong style={{ color: 'var(--ink)' }}>Signature client —</strong> à retourner signé à <span className="mono">dylan@monnier-secretariat.be</span>. Lien e-signature envoyé séparément.
+                <strong style={{ color: 'var(--ink)' }}>Signature client —</strong> à retourner signé à <span className="mono">info@monnier-secretariat.be</span>. Lien e-signature envoyé séparément.
               </div>
               <div style={{ padding: '14px 18px', borderRadius: 4, fontSize: 12, color: 'var(--ink-soft)', lineHeight: 1.6, background: 'var(--ink)', color: 'var(--paper)' }}>
                 <div className="mono" style={{ fontSize: 10, color: 'oklch(0.75 0.01 75)', letterSpacing: '0.08em', marginBottom: 4 }}>HANDOFF FACTURATION</div>
@@ -207,7 +207,7 @@ const LabQuotesList = () => (
             <thead><tr><th>N°</th><th>Client</th><th>Objet</th><th style={{ textAlign: 'right' }}>Montant</th><th>Statut</th><th>Émis le</th><th></th></tr></thead>
             <tbody>
               {[
-                ['D-2026-118', 'Dupuis SPRL', 'Passage Confort 30', '990 €/mois', 'brouillon', '12/05', 'accent'],
+                ['D-2026-118', 'Dupuis SPRL', 'Passage Sérénité 30', '990 €/mois', 'brouillon', '12/05', 'accent'],
                 ['D-2026-117', 'Atelier Lemaire', 'Renouvellement annuel', '790 €/mois', 'envoyé', '11/05', null],
                 ['D-2026-116', 'Café Central', 'Setup + Sérénité 20', '950 €', 'signé', '08/05', 'ok'],
                 ['D-2026-115', 'TechBE', 'Trad NL · forfait', '480 €', 'en attente', '06/05', 'warn'],
@@ -273,7 +273,7 @@ const EspaceDevis = () => (
           <div style={{ flex: 1 }}>
             <div style={{ fontSize: 15, fontWeight: 500, marginBottom: 2 }}>Un devis t’attend pour signature</div>
             <div style={{ fontSize: 13, color: 'var(--ink-soft)' }}>
-              <strong>D-2026-118</strong> — Passage au forfait Confort 30 à partir du 1er juin. Effet immédiat sur ton compteur d’heures.
+              <strong>D-2026-118</strong> — Passage au forfait Sérénité 30 à partir du 1er juin. Effet immédiat sur ton compteur d’heures.
             </div>
           </div>
           <button className="btn btn-ghost btn-sm">aperçu</button>
@@ -286,7 +286,7 @@ const EspaceDevis = () => (
             <thead><tr><th>N°</th><th>Objet</th><th style={{ textAlign: 'right' }}>Montant</th><th>Statut</th><th>Date</th><th></th></tr></thead>
             <tbody>
               {[
-                ['D-2026-118', 'Passage Confort 30 · à partir du 1er juin', '990 €/mois', 'à signer', '12/05', 'warn'],
+                ['D-2026-118', 'Passage Sérénité 30 · à partir du 1er juin', '990 €/mois', 'à signer', '12/05', 'warn'],
                 ['D-2026-022', 'Sérénité 20 · renouvellement', '790 €/mois', 'signé', '15/01', 'ok'],
                 ['D-2025-204', 'Audit documentaire · single shot', '180 €', 'signé · clos', '18/10/25', 'ok'],
                 ['D-2024-098', 'Sérénité 20 · contrat initial', '790 €/mois', 'signé', '08/04/24', 'ok'],
