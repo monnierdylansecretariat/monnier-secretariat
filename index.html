@@ -3,16 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Accueil — Monnier · bureau secrétariat</title>
-  <meta name="description" content="Bras droit administratif pour indépendants, TPE et PME en Belgique francophone. Forfait mensuel sans engagement." />
+  <title>Secrétariat pour indépendants & TPE en Belgique | Monnier bureau secrétariat</title>
+  <meta name="description" content="Dylan Monnier, secrétaire indépendant en Belgique francophone. Gestion administrative, relances clients, permanence téléphonique, compta légère. Forfait mensuel dès 490€ HTVA, sans engagement, résiliable au mois." />
   <link rel="canonical" href="https://monnier-secretariat.com/" />
 
   <!-- OG -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Accueil — Monnier · bureau secrétariat" />
-  <meta property="og:description" content="Bras droit administratif pour indépendants, TPE et PME en Belgique francophone. Forfait mensuel sans engagement." />
+  <meta property="og:title" content="Secrétariat pour indépendants & TPE en Belgique | Monnier" />
+  <meta property="og:description" content="Dylan Monnier, secrétaire indépendant en Belgique francophone. Forfait mensuel dès 490€ HTVA, sans engagement." />
   <meta property="og:url" content="https://monnier-secretariat.com" />
   <meta property="og:locale" content="fr_BE" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Secrétariat pour indépendants & TPE en Belgique | Monnier" />
+  <meta name="twitter:description" content="Dylan Monnier, secrétaire indépendant. Forfait mensuel dès 490€ HTVA, sans engagement." />
 
   <!-- Favicon · monogramme M -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
@@ -29,6 +33,53 @@
 
   <!-- Plausible analytics -->
   <script defer data-domain="monnier-secretariat.com" src="https://plausible.io/js/script.js"></script>
+
+  <!-- Données structurées LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Monnier bureau secrétariat",
+    "description": "Secrétariat administratif pour indépendants, TPE et PME en Belgique francophone. Gestion administrative, relances clients, permanence téléphonique, comptabilité légère.",
+    "url": "https://monnier-secretariat.com",
+    "telephone": "+32471417333",
+    "email": "info@monnier-secretariat.be",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rue du Bois 71",
+      "addressLocality": "Jemeppe-sur-Sambre",
+      "postalCode": "5190",
+      "addressCountry": "BE"
+    },
+    "priceRange": "€€",
+    "currenciesAccepted": "EUR",
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    }],
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 50.46, "longitude": 4.67 },
+      "geoRadius": "150000"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Dylan Monnier",
+      "jobTitle": "Secrétaire indépendant"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Forfaits secrétariat",
+      "itemListElement": [
+        { "@type": "Offer", "name": "Sérénité 10", "price": "490", "priceCurrency": "EUR", "description": "10h/mois incluses" },
+        { "@type": "Offer", "name": "Sérénité 20", "price": "790", "priceCurrency": "EUR", "description": "20h/mois incluses" },
+        { "@type": "Offer", "name": "Sérénité 30", "price": "990", "priceCurrency": "EUR", "description": "30h/mois incluses" }
+      ]
+    }
+  }
+  </script>
 </head>
 <body>
   <div id="root" data-page="home"></div>
