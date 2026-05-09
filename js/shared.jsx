@@ -91,7 +91,7 @@ const VitrineNav = ({ active }) => {
           Réserver un appel
         </a>
       </div>
-      <button className="btn btn-ghost btn-sm" style={{ display: 'none' }} onClick={() => setOpen(o => !o)} id="vnav-toggle">
+      <button className="btn btn-ghost btn-sm vnav-toggle" onClick={() => setOpen(o => !o)}>
         <Icon name={open ? 'x' : 'menu'} size={14} />
       </button>
     </nav>
@@ -142,7 +142,7 @@ const Footer = () => (
     </div>
     <div className="legal">
       <span>© 2026 Dylan Monnier · monnier-secretariat.com</span>
-      <span>Fait à Liège · BE</span>
+      <span>Fait à Bruxelles · BE</span>
     </div>
   </footer>
 );
