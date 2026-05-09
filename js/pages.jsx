@@ -425,7 +425,7 @@ const About = () => (
       <div className="grid-2" style={{ display: 'grid', gridTemplateColumns: '1.4fr 1fr', gap: 56, alignItems: 'start' }}>
         <div>
           <h1 style={{ fontFamily: 'var(--display)', fontSize: 'clamp(48px, 7vw, 72px)', fontWeight: 400, lineHeight: 0.98, letterSpacing: '-0.025em', marginBottom: 18 }}>
-            Dylan Monnier, <span style={{ fontStyle: 'italic' }}>29 ans,</span><br /> bureau secrétariat <span style={{ fontStyle: 'italic' }}>moderne.</span>
+            Dylan Monnier,<br /> bureau secrétariat <span style={{ fontStyle: 'italic' }}>moderne.</span>
           </h1>
           <p style={{ fontSize: 18, color: 'var(--ink-soft)', lineHeight: 1.55, marginBottom: 16 }}>
             Je suis indépendant en Belgique francophone depuis 2023. Mon métier : reprendre la partie administrative qui mange vos journées et vous la rendre nettoyée, automatisée, livrée à temps.
@@ -440,12 +440,10 @@ const About = () => (
 
     <section style={{ padding: '40px 56px 64px', maxWidth: 1100, margin: '0 auto' }}>
       <Eyebrow mark>parcours · timeline</Eyebrow>
-      <div className="grid-4" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 0, borderTop: '1px solid var(--line)' }}>
+      <div className="grid-2" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 0, borderTop: '1px solid var(--line)' }}>
         {[
-          ['2018', 'École de gestion', 'HEC Liège · spé contrôle de gestion'],
-          ['2019', 'Assistant DAF', '4 ans · ETI 80 personnes'],
-          ['2023', 'Lancement Monnier', 'Premiers indépendants liégeois'],
-          ['2026', '12 clients actifs', 'Stack moderne, sans dette technique'],
+          ['2023', 'Lancement de l\'activité', 'Belgique francophone · bureau secrétariat indépendant'],
+          ['Aujourd\'hui', 'En activité', 'Stack moderne, outils IA, accompagnement sur-mesure'],
         ].map(([y, t, d]) => (
           <div key={y} style={{ padding: '22px 24px 22px 0', borderRight: '1px solid var(--line)' }}>
             <div style={{ fontFamily: 'var(--display)', fontSize: 38, lineHeight: 1, fontStyle: 'italic', color: 'var(--accent-ink)' }}>{y}</div>
