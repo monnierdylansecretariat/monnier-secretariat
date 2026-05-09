@@ -448,8 +448,8 @@ const About = () => (
         {[
           ['2023', 'Lancement de l\'activité', 'Belgique francophone · bureau secrétariat indépendant'],
           ['Aujourd\'hui', 'En activité', 'Stack moderne, outils IA, accompagnement sur-mesure'],
-        ].map(([y, t, d]) => (
-          <div key={y} style={{ padding: '22px 24px 22px 0', borderRight: '1px solid var(--line)' }}>
+        ].map(([y, t, d], i) => (
+          <div key={y} style={{ padding: '22px 0', paddingLeft: i === 1 ? 24 : 0, paddingRight: i === 0 ? 24 : 0, borderRight: i === 0 ? '1px solid var(--line)' : 'none' }}>
             <div style={{ fontFamily: 'var(--display)', fontSize: 38, lineHeight: 1, fontStyle: 'italic', color: 'var(--accent-ink)' }}>{y}</div>
             <div style={{ fontSize: 15, fontWeight: 500, marginTop: 10 }}>{t}</div>
             <div style={{ fontSize: 13, color: 'var(--ink-soft)', marginTop: 4 }}>{d}</div>
@@ -596,8 +596,8 @@ const Contact = () => {
             <button type="submit" className="btn btn-primary btn-lg" style={{ width: '100%', justifyContent: 'center' }}>
               Envoyer <Icon name="arrow" size={13} />
             </button>
-            <div className="mono" style={{ fontSize: 10, color: 'var(--ink-mute)', textAlign: 'center', marginTop: 14 }}>
-              En cliquant, vous acceptez la politique de confidentialité. Aucune relance commerciale.
+            <div style={{ fontSize: 12, color: 'var(--ink-mute)', textAlign: 'left', marginTop: 14, lineHeight: 1.5 }}>
+              En cliquant, vous acceptez la <a href="confidentialite.html" style={{ color: 'var(--ink-mute)', textDecoration: 'underline' }}>politique de confidentialité</a>. Aucune relance commerciale.
             </div>
           </form>
         </div>
