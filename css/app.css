@@ -186,15 +186,42 @@
 .vfoot ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; font-size: 13px; }
 .vfoot .legal { max-width: 1100px; margin: 0 auto; padding-top: 24px; border-top: 1px solid oklch(0.30 0.008 75); display: flex; justify-content: space-between; font-size: 12px; color: oklch(0.6 0.01 75); font-family: var(--mono); }
 
+/* Hamburger toggle — hidden by default, shown on mobile */
+.vnav-toggle { display: none; }
+
 @media (max-width: 800px) {
-  .vnav { padding: 14px 24px; }
+  /* Nav */
+  .vnav { padding: 14px 20px; position: relative; }
   .vnav-links { display: none; }
-  .vnav-links.mobile-open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--paper); padding: 14px 24px; border-bottom: 1px solid var(--line); }
-  .vfoot { padding: 48px 24px 28px; }
-  .vfoot .grid { grid-template-columns: 1fr 1fr; gap: 28px; }
-  .vfoot .legal { flex-direction: column; gap: 8px; }
-  section { padding-left: 24px !important; padding-right: 24px !important; }
+  .vnav-links.mobile-open {
+    display: flex; flex-direction: column; align-items: flex-start; gap: 2px;
+    position: absolute; top: 100%; left: 0; right: 0; z-index: 100;
+    background: var(--paper); padding: 12px 20px 18px;
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 8px 24px oklch(0.18 0.008 75 / 0.08);
+  }
+  .vnav-links.mobile-open .vnav-link { padding: 10px 0; font-size: 15px; width: 100%; }
+  .vnav-links.mobile-open .btn-primary { margin: 8px 0 0; width: 100%; justify-content: center; }
+  .vnav-links.mobile-open span[style] { display: none; } /* hide separator */
+  .vnav-toggle { display: inline-flex; }
+
+  /* Sections */
+  section { padding-left: 20px !important; padding-right: 20px !important; padding-top: 48px !important; padding-bottom: 48px !important; }
+
+  /* Grids */
+  .grid-2 { grid-template-columns: 1fr !important; }
   .grid-3 { grid-template-columns: 1fr !important; }
   .grid-4 { grid-template-columns: 1fr 1fr !important; }
-  .grid-2 { grid-template-columns: 1fr !important; }
+
+  /* Footer */
+  .vfoot { padding: 48px 20px 28px; }
+  .vfoot .grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+  .vfoot .legal { flex-direction: column; gap: 8px; }
+}
+
+@media (max-width: 480px) {
+  .vfoot .grid { grid-template-columns: 1fr; gap: 24px; }
+  .grid-4 { grid-template-columns: 1fr !important; }
+  .btn-lg { padding: 13px 20px; font-size: 14px; }
+  .tbl th, .tbl td { padding: 10px 12px; font-size: 12px; }
 }
